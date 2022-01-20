@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <main class="d-flex min-vh-100">
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Side Panel Left -->
+                <aside class="col-3">
+                    <!-- Title -->
+                    <h1>Library of Congress Search Engine</h1>
+                    <form action="" id="searchForm">
+                        <!-- Input -->
+                        <input type="text" class="form-control mb-3" id="searchText"
+                            placeholder="Enter your search text">
+                        <!-- Dropdown  -->
+                        <select id="searchFormat" class="form-input mb-3 w-100">
+                            <option value="" disabled selected>Select a format...</option>
+                            <option value="maps">Maps</option>
+                            <option value="audio">Audio</option>
+                            <option value="photos">Photos</option>
+                            <option value="manuscripts">Manuscripts</option>
+                            <option value="newspapers">Newspapers</option>
+                            <option value="film-and-videos">Film and Videos</option>
+                            <option value="notated-music">Notated Music</option>
+                            <option value="websites">Websites</option>
+                        </select>
+
+                        <!-- Search Button -->
+                        <button class="btn btn-primary" type="submit" id="searchBtn">Search</button>
+                    </form>
+
+                    <!-- past searches from local storage -->
+                    <div id="pastSearches"></div>
+
+                </aside>
+
+                <!-- Right Side Panel -->
+                <section class="col-9">
+                    <!-- Title: show results for key word -->
+                    <div>Showing Results for <span id="keyword"></span> </div>
+                    <!-- Results -->
+                    <div id="results"></div>
+                    <!-- Button - Read More -->
+
+                </section>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
